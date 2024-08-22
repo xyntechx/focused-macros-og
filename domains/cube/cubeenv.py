@@ -82,7 +82,7 @@ class CubeEnv:
             (int): The generated action
 
         """
-        return random.choice(self.n_actions)
+        return random.choice(list(self.action_meanings.keys()))
 
     def step(self, action):
         """Apply an action to the cube

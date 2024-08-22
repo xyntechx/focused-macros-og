@@ -1,6 +1,10 @@
 import random
 
-from domains.cube import Cube
+try:
+    from domains.cube import Cube
+except ModuleNotFoundError:
+    # When being accessed from xyntechx/focused-macros-planning
+    from cam.domains.cube import Cube
 
 class CubeEnv:
     """An OpenAI gym-style wrapper for the Cube class

@@ -105,6 +105,8 @@ class CubeEnv:
         """Render the cube as colored ASCII art"""
         self.cube.render()
 
+    def diff(self, baseline=None):
+        return len(self.cube.summarize_effects(baseline=baseline))
 
 def test():
     """Test the CubeEnv"""

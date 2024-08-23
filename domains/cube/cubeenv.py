@@ -1,4 +1,5 @@
 import random
+import math
 
 try:
     from domains.cube import Cube
@@ -106,7 +107,10 @@ class CubeEnv:
         self.cube.render()
 
     def diff(self, baseline=None):
-        return len(self.cube.summarize_effects(baseline=baseline))
+        val = len(self.cube.summarize_effects(baseline=baseline))
+        if val > 0:
+            return val
+        return math.inf
 
 def test():
     """Test the CubeEnv"""

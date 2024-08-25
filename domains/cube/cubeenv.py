@@ -110,6 +110,8 @@ class CubeEnv:
         val = len(self.cube.summarize_effects(baseline=baseline))
         if val > 0:
             return val
+        if baseline is None: # when measuring against a solved cube, matching it means it's solved
+            return 0
         return math.inf
 
 def test():

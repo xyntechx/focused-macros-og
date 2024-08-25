@@ -4,7 +4,7 @@ import math
 try:
     from domains.cube import Cube
 except ModuleNotFoundError:
-    # When being accessed from xyntechx/focused-macros-planning
+    # When being accessed from xyntechx/focused-macros
     from cam.domains.cube import Cube
 
 class CubeEnv:

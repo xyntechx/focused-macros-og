@@ -1,5 +1,5 @@
 import random
-import math
+from utils import INFINITY
 
 try:
     from domains.cube import Cube
@@ -112,7 +112,7 @@ class CubeEnv:
             return val
         if baseline is None: # when measuring against a solved cube, matching it means it's solved
             return 0
-        return math.inf
+        return INFINITY
 
 def test():
     """Test the CubeEnv"""
